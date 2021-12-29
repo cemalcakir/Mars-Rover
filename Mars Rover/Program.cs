@@ -59,6 +59,7 @@ namespace Mars_Rover
         static void AddSingleRoverAndInput(Plateau currentPlateau, string[] roverInfo)
         {
             Rover CurrentRover = AddSingleRover(currentPlateau, roverInfo);
+            currentPlateau.AddRover(CurrentRover);
             List<char> MovementInput = GetMovementInputs();
             CurrentRover.Move(MovementInput);
         }
@@ -86,7 +87,6 @@ namespace Mars_Rover
 
             Rover rover = new Rover(LocationX, LocationY, Direction, currentPlateau);
 
-            currentPlateau.AddRover(rover);
             return rover;
         }
 
