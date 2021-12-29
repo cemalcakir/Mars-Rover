@@ -6,6 +6,11 @@ namespace Mars_Rover
     {
         static void Main(string[] args)
         {
+            Start();
+        }
+
+        static void Start()
+        {
             while (true)
             {
                 int[] WidthAndHeight = GetPlateauCoordinates();
@@ -47,7 +52,7 @@ namespace Mars_Rover
                     Console.WriteLine(e);
                 }
 
-                
+
             }
         }
 
@@ -115,7 +120,8 @@ namespace Mars_Rover
                     int[] WidthAndHeight = { int.Parse(WidthAndHeightStr[0]), int.Parse(WidthAndHeightStr[1]) };
                     return WidthAndHeight;
                 }
-                catch (Exception e) {
+                catch (Exception e)
+                {
                     Console.WriteLine("Plase enter the input as specified (Number Number) ");
                 }
 
